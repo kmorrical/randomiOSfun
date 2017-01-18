@@ -10,16 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+ 
+    @IBOutlet weak var picLbl: UILabel!
+    
+    @IBOutlet weak var picImg: UIImageView!
+    
+    @IBAction func clickMe() {
+        let result = arc4random_uniform(6) + 1
+        
+        picLbl.text = ""
+        picImg.image = UIImage(named:
+        "\(result)")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
